@@ -1,4 +1,4 @@
-// get meals after search
+// get meals as result after search
 
 function findMeal(){
     const mealName = document.getElementById('input-meal').value;
@@ -21,7 +21,7 @@ function findMeal(){
     });
 }
 
-// display all meals after search
+// displaying all meals after search button press
 
 const displayMeals = mealsOb => {
     const mealArray = mealsOb.meals;
@@ -42,7 +42,7 @@ const displayMeals = mealsOb => {
     });
 }
 
-// get all ingredients after select any meal
+// get all ingredients after select any meal item
 
 const getIngredients = mealId => {
     fetch('https://www.themealdb.com/api/json/v1/1/lookup.php?i='+ mealId +'')
@@ -50,7 +50,7 @@ const getIngredients = mealId => {
     .then(data => displayIngredients(data));
 }
 
-// For displaying all ingredients after select any meal
+// after select any meal displaying all ingredients 
 
 const displayIngredients = meal => {
     const mealArray = meal.meals[0];
